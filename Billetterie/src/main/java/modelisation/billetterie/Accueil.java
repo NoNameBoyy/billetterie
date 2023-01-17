@@ -35,11 +35,11 @@ public class Accueil extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jButton1Nouveau = new javax.swing.JButton();
-        jButton2Existant = new javax.swing.JButton();
+        jLabel1               = new javax.swing.JLabel();
+        jButton1Nouveau       = new javax.swing.JButton();
+        jButton2Existant      = new javax.swing.JButton();
         jButton3Visualisation = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jButton1              = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 

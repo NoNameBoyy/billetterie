@@ -31,26 +31,26 @@ public class Billet extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jTextFieldNom = new javax.swing.JTextField();
-        jTextFieldPrenom = new javax.swing.JTextField();
-        jTextFieldDateNai = new javax.swing.JTextField();
-        jTextFieldCategorie = new javax.swing.JTextField();
-        jTextFieldBillet = new javax.swing.JTextField();
-        jTextFieldReduc = new javax.swing.JTextField();
-        jTextFieldPrix = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jTextFieldNumeroID = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        jLabel1  = new javax.swing.JLabel();
+        jLabel2  = new javax.swing.JLabel();
+        jLabel3  = new javax.swing.JLabel();
+        jLabel4  = new javax.swing.JLabel();
+        jLabel5  = new javax.swing.JLabel();
+        jLabel6  = new javax.swing.JLabel();
+        jLabel7  = new javax.swing.JLabel();
+        jLabel8  = new javax.swing.JLabel();
+        jLabel9  = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jTextFieldFidelite = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        jTextFieldNom       = new javax.swing.JTextField();
+        jTextFieldPrenom    = new javax.swing.JTextField();
+        jTextFieldDateNai   = new javax.swing.JTextField();
+        jTextFieldCategorie = new javax.swing.JTextField();
+        jTextFieldBillet    = new javax.swing.JTextField();
+        jTextFieldReduc     = new javax.swing.JTextField();
+        jTextFieldPrix      = new javax.swing.JTextField();
+        jTextFieldNumeroID  = new javax.swing.JTextField();
+        jTextFieldFidelite  = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 

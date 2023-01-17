@@ -34,15 +34,16 @@ public class Billetterie extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextFieldNom = new javax.swing.JTextField();
-        jTextFieldPrenom = new javax.swing.JTextField();
-        jComboBoxAnnee = new javax.swing.JComboBox<>();
-        jComboBoxMois = new javax.swing.JComboBox<>();
-        jComboBoxJour = new javax.swing.JComboBox<>();
+        jTextFieldNom     = new javax.swing.JTextField();
+        jTextFieldPrenom  = new javax.swing.JTextField();
+        jComboBoxAnnee    = new javax.swing.JComboBox<>();
+        jComboBoxMois     = new javax.swing.JComboBox<>();
+        jComboBoxJour     = new javax.swing.JComboBox<>();
         jTextFieldAdresse = new javax.swing.JTextField();
-        jTextFieldNumTel = new javax.swing.JTextField();
-        jTextFieldTaille = new javax.swing.JTextField();
-        jComboBoxBillet = new javax.swing.JComboBox<>();
+        jTextFieldNumTel  = new javax.swing.JTextField();
+        jTextFieldTaille  = new javax.swing.JTextField();
+        jComboBoxBillet   = new javax.swing.JComboBox<>();
+        jButtonConfirmer = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -50,7 +51,6 @@ public class Billetterie extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jButtonConfirmer = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -194,21 +194,21 @@ public class Billetterie extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldNomActionPerformed
 
     private void jButtonConfirmerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfirmerActionPerformed
-        String nom = jTextFieldNom.getText();
-        String prenom = jTextFieldPrenom.getText();
-        String naiJour = (String) jComboBoxJour.getSelectedItem();
-        String naiMois = (String) jComboBoxMois.getSelectedItem();
+        String nom      = jTextFieldNom.getText();
+        String prenom   = jTextFieldPrenom.getText();
+        String naiJour  = (String) jComboBoxJour.getSelectedItem();
+        String naiMois  = (String) jComboBoxMois.getSelectedItem();
         String naiAnnee = (String) jComboBoxAnnee.getSelectedItem();
-        String adresse = jTextFieldAdresse.getText();
-        String numTel = jTextFieldNumTel.getText();
-        String taille = jTextFieldTaille.getText();
-        String billet = (String) jComboBoxBillet.getSelectedItem();
+        String adresse  = jTextFieldAdresse.getText();
+        String numTel   = jTextFieldNumTel.getText();
+        String taille   = jTextFieldTaille.getText();
+        String billet   = (String) jComboBoxBillet.getSelectedItem();
         //Calcule les informations à déterminer automatiquement avec les informations remplies
         int anneeCalcul = 0;
         if (!naiAnnee.equals("Année"))
             anneeCalcul = Integer.parseInt(naiAnnee);
-        Calcul cal = new Calcul(anneeCalcul, billet);
-        String categorie = cal.getCategorie();
+        Calcul cal      = new Calcul(anneeCalcul, billet);
+        String categorie= cal.getCategorie();
         String fidelite = cal.getStringFidelite();
         
         WriterReader WR = new WriterReader();
@@ -221,7 +221,8 @@ public class Billetterie extends javax.swing.JFrame {
            !naiJour.equals("Jour") && !naiMois.equals("Mois") && !naiAnnee.equals("Année") &&
            !numTel.equals("") && cal.notChar(numTel) && !billet.equals("--Sélectionner--") &&
            (cal.notChar(taille) || taille.equals(""))){
-            if(!WR.ScannerGeneral(exist)){ //si le client existe déjà (déterminé par le numéro de téléphone) une fenêtre d'information empêche de continuer
+            if(!WR.ScannerGeneral(exist)){
+                //si le client existe déjà (déterminé par le numéro de téléphone) une fenêtre d'information empêche de continuer
                 if(WriterReader.write(Ready)){
                     jTextFieldNom.setText("");
                     jTextFieldPrenom.setText("");

@@ -35,17 +35,17 @@ public class NouveauBillet extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jTextFieldPrenom = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jButtonConfirmer = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jTextFieldReduction = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jTextFieldReducFidelite = new javax.swing.JTextField();
-        jCheckBoxFid = new javax.swing.JCheckBox();
         jLabel4 = new javax.swing.JLabel();
-        jTextFieldPrixFinal = new javax.swing.JTextField();
+        jTextFieldPrenom        = new javax.swing.JTextField();
+        jTextFieldReduction     = new javax.swing.JTextField();
+        jTextFieldReducFidelite = new javax.swing.JTextField();
+        jTextFieldPrixFinal     = new javax.swing.JTextField();
+        jButtonConfirmer = new javax.swing.JButton();
+        jButton1         = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jCheckBoxFid = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -198,7 +198,7 @@ public class NouveauBillet extends javax.swing.JFrame {
         String[] ps = ligne.split(",");
         String billet = (String) jComboBox1.getSelectedItem();
         
-        double reducFidelite = (Double.valueOf(ps[11])/66);
+        double reducFidelite = (Double.valueOf(ps[11]) / 66);
         DecimalFormat df = new DecimalFormat("####0.00");
         jTextFieldReducFidelite.setText(String.valueOf(df.format(reducFidelite)) + "€");
         this.reducFid =  reducFidelite;
@@ -207,7 +207,7 @@ public class NouveauBillet extends javax.swing.JFrame {
     //Méthode de calcul du prix du billet compte tenu des réductions et des
     //points de fidelité ou non
     public void prixFinal(){
-        double prix = 0;
+        double prix      = 0;
         double reduction = 0;
         double prixFinal = 0;
         String[] ps = ligne.split(",");
@@ -231,12 +231,12 @@ public class NouveauBillet extends javax.swing.JFrame {
         WriterReader WR = new WriterReader();
         WR.ScannerGeneral(client);
         ligne = WR.getLigneOut();
-        String[] ps = ligne.split(",");
+        String[] ps   = ligne.split(",");
         String billet = (String) jComboBox1.getSelectedItem();
         
         //Calcul du nouveau nombre de points de fidélité
         int anneeCalcul = Integer.valueOf(ps[5]); 
-        Calcul cal = new Calcul(anneeCalcul, billet);
+        Calcul cal      = new Calcul(anneeCalcul, billet);
         String fidelite = cal.getStringFidelite();
         
         //Si le client n'utilise pas ses points de fidelité, il récupère ceux qu'il avait en plus des nouveaux
@@ -246,7 +246,7 @@ public class NouveauBillet extends javax.swing.JFrame {
         else
             fideliteInt = Integer.valueOf(ps[11]) + Integer.valueOf(fidelite);
         
-        String fide = Integer.toString(fideliteInt);
+        String fide  = Integer.toString(fideliteInt);
         String ready = String.format(ps[0]+","+ps[1]+","+ps[2]+","+ps[3]+","+ps[4]+","+ps[5]+","+ps[6]+","+ps[7]+","+ps[8]+","+billet+","+ps[10]+","+fide);
         
         EditDelete ED = new EditDelete();

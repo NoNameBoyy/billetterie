@@ -36,17 +36,17 @@ public class Modifier extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jButtonEnregistrer = new javax.swing.JButton();
-        jTextFieldNom = new javax.swing.JTextField();
-        jTextFieldPrenom = new javax.swing.JTextField();
-        jComboBoxJour = new javax.swing.JComboBox<>();
-        jComboBoxMois = new javax.swing.JComboBox<>();
-        jComboBoxAnnee = new javax.swing.JComboBox<>();
-        jTextFieldAdresse = new javax.swing.JTextField();
-        jTextFieldNumTel = new javax.swing.JTextField();
-        jTextFieldTaille = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jTextFieldNom     = new javax.swing.JTextField();
+        jTextFieldPrenom  = new javax.swing.JTextField();
+        jComboBoxJour     = new javax.swing.JComboBox<>();
+        jComboBoxMois     = new javax.swing.JComboBox<>();
+        jComboBoxAnnee    = new javax.swing.JComboBox<>();
+        jTextFieldAdresse = new javax.swing.JTextField();
+        jTextFieldNumTel  = new javax.swing.JTextField();
+        jTextFieldTaille  = new javax.swing.JTextField();
+        jButtonEnregistrer = new javax.swing.JButton();
+        jButton1           = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -167,7 +167,7 @@ public class Modifier extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     private String infoLigne;
-    Calcul cal = new Calcul();
+    Calcul cal    = new Calcul();
     Client client = cal.clientvide;
     
     public void setClient(Client c){
@@ -208,17 +208,17 @@ public class Modifier extends javax.swing.JFrame {
     private void jButtonEnregistrerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEnregistrerActionPerformed
         //Enregistrement des informations mises à jour
         String[] ps = infoLigne.split(",");
-        String nom = jTextFieldNom.getText();
-        String prenom = jTextFieldPrenom.getText();
-        String naiJour = (String) jComboBoxJour.getSelectedItem();
-        String naiMois = (String) jComboBoxMois.getSelectedItem();
+        String nom      = jTextFieldNom.getText();
+        String prenom   = jTextFieldPrenom.getText();
+        String naiJour  = (String) jComboBoxJour.getSelectedItem();
+        String naiMois  = (String) jComboBoxMois.getSelectedItem();
         String naiAnnee = (String) jComboBoxAnnee.getSelectedItem();
-        String adresse = jTextFieldAdresse.getText();
-        String numTel = jTextFieldNumTel.getText();
-        String taille = jTextFieldTaille.getText();
+        String adresse  = jTextFieldAdresse.getText();
+        String numTel   = jTextFieldNumTel.getText();
+        String taille   = jTextFieldTaille.getText();
 
         int anneeCalcul = Integer.parseInt(naiAnnee);
-        String billet = ps[9];
+        String billet   = ps[9];
         Calcul cal = new Calcul(anneeCalcul, billet);
         String categorie = cal.getCategorie();
         String newC = String.format(ps[0]+","+nom+","+prenom+","+naiJour+","+naiMois+","+naiAnnee+","+adresse+","+numTel+","+taille+","+ps[9]+","+categorie+","+ps[11]);

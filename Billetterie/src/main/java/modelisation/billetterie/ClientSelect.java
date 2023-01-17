@@ -31,11 +31,11 @@ public class ClientSelect extends javax.swing.JFrame {
     private void initComponents() {
 
         jTextField1 = new javax.swing.JTextField();
-        Modifier = new javax.swing.JButton();
-        jButtonAchatBillet = new javax.swing.JButton();
-        jButtonSupprimer = new javax.swing.JButton();
+        Modifier    = new javax.swing.JButton();
+        jButtonAchatBillet     = new javax.swing.JButton();
+        jButtonSupprimer       = new javax.swing.JButton();
         jButtonChangerdeClient = new javax.swing.JButton();
-        jButtonQuitter = new javax.swing.JButton();
+        jButtonQuitter         = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -123,12 +123,12 @@ public class ClientSelect extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private String infoLigne;   
-    Calcul cal = new Calcul();
+    Calcul cal    = new Calcul();
     Client client = cal.clientvide;
     
     //Affiche le nom et et prénom du client en haut de la fenêtre
     public void InfoClient(Client c){
-        jTextField1.setText(c.getNom()+" "+c.getPrenom());
+        jTextField1.setText(c.getNom() + " " + c.getPrenom());
         client = c; //récupère le client
     }
     

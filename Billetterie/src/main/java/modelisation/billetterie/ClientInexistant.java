@@ -30,7 +30,7 @@ public class ClientInexistant extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jLabel1        = new javax.swing.JLabel();
         jButtonAjouter = new javax.swing.JButton();
         jButtonAnnuler = new javax.swing.JButton();
 

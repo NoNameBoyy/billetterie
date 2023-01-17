@@ -35,11 +35,11 @@ public class InterfaceClient extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton1Confirmer = new javax.swing.JButton();
-        jTextFieldNom = new javax.swing.JTextField();
-        jTextFieldPrenom = new javax.swing.JTextField();
+        jTextFieldNom       = new javax.swing.JTextField();
+        jTextFieldPrenom    = new javax.swing.JTextField();
         jTextFieldTelephone = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jButton1          = new javax.swing.JButton();
+        jButton1Confirmer = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 

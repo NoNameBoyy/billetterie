@@ -61,7 +61,7 @@ public class VisualisationClients extends javax.swing.JFrame {
                     csv_data.addColumn(csvRecord.get(10));
                     csv_data.addColumn(csvRecord.get(11));
                 } else {
-                    Vector row = new Vector();
+                    Vector<String> row = new Vector<String>();
                     row.add(csvRecord.get(0));
                     row.add(csvRecord.get(1));
                     row.add(csvRecord.get(2));
